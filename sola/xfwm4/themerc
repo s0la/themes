@@ -1,0 +1,15 @@
+full_width_title=false
+title_alignment=center
+button_spacing=0
+button_offset=0
+title_vertical_offset_active=1
+title_vertical_offset_inactive=1
+active_text_color=#555
+inactive_text_color=#9c9292
+show_app_icon=false
+
+shadow_delta_height=2
+shadow_delta_width=0
+shadow_delta_x=0
+shadow_delta_y=-10
+shadow_opacity=65

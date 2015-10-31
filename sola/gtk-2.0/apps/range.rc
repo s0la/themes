@@ -1,0 +1,103 @@
+style "range" = "default"
+{
+	GtkScale::slider-length         = 17
+	GtkRange::trough_border         = 0
+	GtkRange::slider_width          = 17
+	GtkRange::stepper_size          = 17
+
+	engine "pixmap" 
+	{
+		image 
+		{
+			function        = BOX
+			recolorable     = TRUE
+			detail          = "trough"
+			file            = "Range/trough-horizontal.png"
+			border          = { 4, 4, 0, 0}
+			stretch         = TRUE
+			orientation     = HORIZONTAL
+		}
+		image 
+		{
+			function        = BOX
+			recolorable     = TRUE
+			detail          = "trough"
+			file            = "Range/trough-vertical.png"
+			border          = { 0, 0, 4, 4}
+			stretch         = TRUE
+			orientation     = VERTICAL
+		}
+		# the sliders
+		image 
+		{
+			function        = SLIDER
+			recolorable     = TRUE
+			state           = NORMAL
+			file            = "Range/slider-horiz.png"
+			border          = { 0, 0, 0, 0}
+			stretch         = TRUE
+			orientation     = HORIZONTAL
+		}
+		image 
+		{
+			function        = SLIDER
+			recolorable     = TRUE
+			state           = PRELIGHT
+			file            = "Range/slider-horiz-prelight.png"
+			border          = { 0, 0, 0, 0}
+			stretch         = TRUE
+			orientation     = HORIZONTAL
+		}
+		image 
+		{
+			function        = SLIDER
+			recolorable     = TRUE
+			state           = INSENSITIVE
+			file            = "Range/slider-horiz.png"
+			border          = { 0, 0, 0, 0}
+			stretch         = TRUE
+			orientation     = HORIZONTAL
+		}
+		# vertical
+		image 
+		{
+			function        = SLIDER
+			recolorable     = TRUE
+			state           = NORMAL
+			file            = "Range/slider-horiz.png"
+			border          = { 0, 0, 0, 0}
+			stretch         = TRUE
+			orientation     = VERTICAL
+		}
+		image 
+		{
+			function        = SLIDER
+			recolorable     = TRUE
+			state           = PRELIGHT
+			file            = "Range/slider-horiz-prelight.png"
+			border          = { 0, 0, 0, 0}
+			stretch         = TRUE
+			orientation     = VERTICAL
+		}
+		image 
+		{
+			function        = SLIDER
+			recolorable     = TRUE
+			state           = INSENSITIVE
+			file            = "Range/slider-horiz.png"
+			border          = { 0, 0, 0, 0}
+ 			stretch         = TRUE
+			orientation     = VERTICAL
+		}
+		image
+		{
+			function	= BOX
+			file        	= "Range/null.png"
+			border      	= { 3, 3, 3, 3 }
+			stretch         = TRUE
+		}
+	}
+}
+
+class "GtkScale"                            style "range"
+widget_class "*<GtkMenuItem>.*.<GtkScale>"  style "range"
