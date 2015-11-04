@@ -360,10 +360,10 @@ row:selected:focus {
 
     border-width: 0px 0;
     border-style: solid;
-    border-color: shade(@theme_selected_bg_color, 0.8);
+    border-color: shade(@theme_selected_bg_color, 1.0);
     background-image: linear-gradient(to bottom,
-                                      shade(@theme_selected_bg_color, 1.2),
-                                      shade(@theme_selected_bg_color, 1.0)
+                                      shade(@theme_selected_bg_color, 0.94),
+                                      shade(@theme_selected_bg_color, 0.82)
                                       );
 
     color: @theme_selected_fg_color;
@@ -1203,7 +1203,7 @@ GtkTreeMenu .menuitem {
 .menu .menuitem:hover {
     border-color: shade(@theme_selected_bg_color, 0.8);
     background-image: linear-gradient(to bottom,
-                            @theme_selected_bg_color,
+                            shade(@theme_selected_bg_color, 0.95),
                             shade(@theme_selected_bg_color, 0.85)); 
     
 }
@@ -1573,14 +1573,14 @@ GtkProgressBar {
     border-style: solid;
     border-color: shade(@theme_selected_bg_color, 0.85);
     background-image: linear-gradient(to bottom,
-                                      shade(@theme_selected_bg_color, 1.15),
+                                      shade(@theme_selected_bg_color, 1.1),
                                       shade(@theme_selected_bg_color, 0.95)
                                       );
 }
 
 .progressbar.vertical {
     background-image: linear-gradient(to right,
-                                      shade(@theme_selected_bg_color, 1.15),
+                                      shade(@theme_selected_bg_color, 1.1),
                                       shade(@theme_selected_bg_color, 0.95)
                                       );
 }
@@ -3949,8 +3949,8 @@ GtkOverlay.osd {
 }
 
 .osd .scale.trough.highlight {
-    border-color: @theme_selected_bg_color;
-    background-color: @theme_selected_bg_color;
+    border-color: shade(@theme_selected_bg_color, 0.75);
+    background-color: shade(@theme_selected_bg_color, 0.75);
     background-image: none;
 }
 
@@ -4387,6 +4387,7 @@ GtkBubbleWindow .toolbar {
     /* this is used for the resize cursor area */
     margin: 10px;
 }
+
 
 .window-frame.tiled {
     border-radius: 0;
