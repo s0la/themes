@@ -1,7 +1,7 @@
 style "theme-panel"
 {
-	ythickness		= 1
-	xthickness		= 1
+	ythickness		= 2
+	xthickness		= 2
 
 	#bg_pixmap[NORMAL]	= "/Panel/panel-bg.png" # Disable for normal panel backgrounds.
 
