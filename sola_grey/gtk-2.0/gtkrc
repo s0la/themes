@@ -299,17 +299,19 @@ style "menu"
 	bg[PRELIGHT]      = shade (0.85, @selected_bg_color)
 	bg[ACTIVE]        = @bg_color
 	bg[INSENSITIVE]   = @bg_color
+
 	fg[NORMAL]        = @text_color # Color for normal text.
 	fg[PRELIGHT]      = @selected_fg_color
 	fg[SELECTED]      = @selected_fg_color
 	fg[ACTIVE]        = @selected_fg_color
 	fg[INSENSITIVE]   = shade (0.75, @bg_color) # Text color for non-interactive menu items
+
 	text[NORMAL]      = @text_color # Color for menu-item radio/checks.
 	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
 	text[PRELIGHT]    = @selected_fg_color
 	text[SELECTED]    = @selected_fg_color
 	text[ACTIVE]      = @fg_color
-	text[INSENSITIVE] = @text_color
+	text[INSENSITIVE] = shade (0.9, @bg_color)
 	
 	engine "murrine" 
 	{
