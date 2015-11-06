@@ -315,8 +315,7 @@ style "menu"
 	
 	engine "murrine" 
 	{
-		border_shades = { 1.3, 1.2 }
-		contrast = 0.5
+		contrast = 0.1
 	}
 }
 
@@ -325,16 +324,18 @@ style "menu_item"
   xthickness = 0
   ythickness = 3
   
-  #bg[PRELIGHT] = @selected_bg_color
-  #fg[PRELIGHT] = "#1e1e1e"
-  #fg[INSENSITIVE] = "#7e7e7e"
+  engine "murrine" 
+	{
+		border_shades = { 1.3, 1.2 }
+		contrast = 0.5
+	}
 }
 
 style "menu_framed_box"
 {
 	engine "murrine"
 	{
-        }
+    }
 }
 
 style "menubar" = "menu"
@@ -739,7 +740,7 @@ style "xfce-header"
 style "xfwm-tabwin"
 {
 	Xfwm4TabwinWidget::border-width = 1
-    Xfwm4TabwinWidget::border-alpha = 0.4
+    Xfwm4TabwinWidget::border-alpha = 0.5
 	Xfwm4TabwinWidget::icon-size = 80
 	Xfwm4TabwinWidget::listview-icon-size = 48
     Xfwm4TabwinWidget::alpha = 0.73
