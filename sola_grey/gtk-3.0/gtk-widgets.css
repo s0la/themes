@@ -1985,7 +1985,7 @@ GtkLevelBar.vertical {
 .menuitem.separator,
 .menuitem .separator {
     -GtkMenuItem-horizontal-padding: 0;
-    border-width: 1px;
+    border-width: 0px;
     color: shade(@bg_color, 0.95);
 }
 

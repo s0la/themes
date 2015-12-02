@@ -36,13 +36,11 @@ XfceHeading,
 
 .xfce4-panel .button:hover,
 .xfce4-panel .button:active:hover {
-    background-color: alpha (#eee, 0.3);
-    background-image: none;
-    color: shade(@panel_fg_color, 1.08);
+    background: url("file:///home/sola/.themes/sola_grey/gtk-2.0/apps/Panel/panel-button-hover.png");
+    background-size: 24px 24px;
 }
 
 .xfce4-panel .menu {
     -gtk-image-effect: none;
-
     text-shadow: none;
 }

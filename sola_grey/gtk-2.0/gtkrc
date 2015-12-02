@@ -376,10 +376,10 @@ style "menubar-menuitem"
 style "separator-menu-item"
 {
 	xthickness = 1
-	ythickness = 1
+	ythickness = 0
 	engine "murrine"
 	{
-		contrast = 0.3
+		contrast = 0.0
 		separatorstyle = 1
 	}
 }
@@ -740,7 +740,7 @@ style "xfce-header"
 style "xfwm-tabwin"
 {
 	Xfwm4TabwinWidget::border-width = 1
-  Xfwm4TabwinWidget::border-alpha = 0.1
+  Xfwm4TabwinWidget::border-alpha = 0
 	Xfwm4TabwinWidget::icon-size = 80
 	Xfwm4TabwinWidget::listview-icon-size = 48
   Xfwm4TabwinWidget::alpha = 0.73
@@ -759,7 +759,7 @@ style "xfwm-tabwin"
 
 	engine "murrine" {
 		roundness = 1
-		contrast            = 1.2		#old value 1.1				#set value to 1.0 to neutralize frame
+		contrast            = 1.37		#old value 1.1				#set value to 1.0 to neutralize frame
 		highlight_shade     = 1.00
 		lightborder_shade   = 1.0
 		gradient_shades     = {1.1,1.2,1.2,1.1}		#old value {0.9,1.2,1.2,1.4}
