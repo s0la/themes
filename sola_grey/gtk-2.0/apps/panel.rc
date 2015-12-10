@@ -45,7 +45,7 @@ style "theme-panel"
 			function		= BOX
 			recolorable		= TRUE
 			state			= PRELIGHT
-			file			= "Panel/panel-button-hover.png"
+			file			= "Panel/tabwin_item.png"
 			border			= { 4, 4, 1, 1 }
 			stretch			= TRUE
 		}
@@ -55,7 +55,7 @@ style "theme-panel"
 			function		= BOX
 			recolorable		= TRUE
 			state			= ACTIVE
-			file			= "Panel/panel-button-active.png"
+			file			= "Panel/tabwin_item.png"
 			border			= { 4, 4, 1, 1 }
 			stretch			= TRUE
 		}
@@ -65,7 +65,7 @@ style "theme-panel"
 			function		= BOX
 			recolorable		= TRUE
 			state			= SELECTED
-			file			= "Panel/panel-button-active.png"
+			file			= "Panel/tabwin_item.png"
 			border			= { 4, 4, 1, 1 }
 			stretch			= TRUE
 		}
