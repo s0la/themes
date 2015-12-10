@@ -741,25 +741,25 @@ style "xfwm-tabwin"
 {
 	Xfwm4TabwinWidget::border-width = 1
   Xfwm4TabwinWidget::border-alpha = 0
-	Xfwm4TabwinWidget::icon-size = 80
+	Xfwm4TabwinWidget::icon-size = 85
 	Xfwm4TabwinWidget::listview-icon-size = 48
-  Xfwm4TabwinWidget::alpha = 0.73
+  Xfwm4TabwinWidget::alpha = 0.7
   Xfwm4TabwinWidget::border-radius = 1
 
 	bg[NORMAL]		= shade (0.7, "#698182")	#initial color (0.5, "#9bbbbe")		#(1.0, "#b3b3b3")
-	bg[ACTIVE]		= shade (0.5, "#555")	#(1.3, "#b3b3b3")
-	bg[PRELIGHT]	= shade (0.5, "#555")
-	bg[SELECTED]	= shade (0.5, "#555")
+	bg[ACTIVE]		= shade (0.47, "#698182")	#(1.3, "#b3b3b3")
+	bg[PRELIGHT]	= shade (0.47, "#698182")
+	bg[SELECTED]	= shade (0.47, "#698182")
 
-	font_name = "bold"
-	fg[NORMAL]		= "#eee"	#"#333"
-	fg[ACTIVE]		= "#eee"
-	fg[PRELIGHT]	= "#eee"
-	fg[SELECTED]	= "#eee"
+	font_name = "bold 0"
+	fg[NORMAL]		= "#c1c1c1"	#"#333"
+	fg[ACTIVE]		= "#c1c1c1"
+	fg[PRELIGHT]	= "#c1c1c1"
+	fg[SELECTED]	= "#c1c1c1"
 
 	engine "murrine" {
 		roundness = 1
-		contrast            = 1.37		#old value 1.1				#set value to 1.0 to neutralize frame
+		contrast            = 1.22		#old value 1.1				#set value to 1.0 to neutralize frame
 		highlight_shade     = 1.00
 		lightborder_shade   = 1.0
 		gradient_shades     = {1.1,1.2,1.2,1.1}		#old value {0.9,1.2,1.2,1.4}
@@ -798,7 +798,7 @@ style "xfwm-tabwin"
 
 style "xfwm-tabwin-button"
 {
-	font_name = "bold"
+	font_name = "bold 0"
 }
 
 style "xfdesktop-icon-view"
