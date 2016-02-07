@@ -1,19 +1,19 @@
 style "notify-window"
 {
     XfceNotifyWindow::summary-bold = 1
-    XfceNotifyWindow::border-color = "#333"
-    XfceNotifyWindow::border-color-hover = "#333"
+    XfceNotifyWindow::border-color = shade (0.6, "#699098")
+    XfceNotifyWindow::border-color-hover = "#445857"
     XfceNotifyWindow::border-radius = 2.0
     XfceNotifyWindow::border-width = 0.1
     XfceNotifyWindow::border-width-hover = 0.1
-    bg[NORMAL] = "#333"
+    bg[NORMAL] = shade (0.6, "#699098")
 }
 
 style "notify-button"
 {
-    bg[NORMAL] = "#333"
-    bg[PRELIGHT] = "#292929"
-    bg[ACTIVE] = "#222222"
+    bg[NORMAL] = shade (0.65, "#699098")
+    bg[PRELIGHT] = shade (0.7, "#699098")
+    bg[ACTIVE] = shade (0.6, "#699098")
     fg[NORMAL] = "#ffffff"
     fg[PRELIGHT] = "#ffffff"
     engine "murrine" {

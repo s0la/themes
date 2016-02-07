@@ -740,12 +740,12 @@ style "xfce-header"
 style "xfwm-tabwin"
 {
 	Xfwm4TabwinWidget::border-width = 1
-  Xfwm4TabwinWidget::border-alpha = 0
+  	Xfwm4TabwinWidget::border-alpha = 0
 	Xfwm4TabwinWidget::icon-size = 85
 	Xfwm4TabwinWidget::listview-icon-size = 48
-  Xfwm4TabwinWidget::alpha = 0.7
+  	Xfwm4TabwinWidget::alpha = 0.7
 
-  Xfwm4TabwinWidget::border-radius = 1
+  	Xfwm4TabwinWidget::border-radius = 1
 
 	bg[NORMAL]		= shade (0.7, "#699098")	#initial color (0.5, "#9bbbbe")		#(1.0, "#b3b3b3")
 
@@ -769,7 +769,7 @@ style "xfwm-tabwin"
 			function		= BOX
 			recolorable		= TRUE
 			state			= PRELIGHT
-			file			= "apps/Panel/tabwin_item.png"
+			file			= "apps/Panel/tabwin_grey25.png"
 			border			= { 4, 4, 1, 1 }
 			stretch			= TRUE
 		}
@@ -779,7 +779,7 @@ style "xfwm-tabwin"
 			function		= BOX
 			recolorable		= TRUE
 			state			= ACTIVE
-			file			= "apps/Panel/tabwin_item.png"
+			file			= "apps/Panel/tabwin_grey25.png"
 			border			= { 4, 4, 1, 1 }
 			stretch			= TRUE
 		}
@@ -789,7 +789,7 @@ style "xfwm-tabwin"
 			function		= BOX
 			recolorable		= TRUE
 			state			= SELECTED
-			file			= "apps/Panel/tabwin_item.png"
+			file			= "apps/Panel/tabwin_grey25.png"
 			border			= { 4, 4, 1, 1 }
 			stretch			= TRUE
 		}

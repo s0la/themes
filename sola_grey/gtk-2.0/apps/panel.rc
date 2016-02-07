@@ -22,10 +22,10 @@ style "theme-panel"
 	bg[SELECTED]   = shade (0.35, "#fff")
 	bg[INSENSITIVE]= "#fff"
 	bg[NORMAL]     = "#2b2b2b"
-	fg[NORMAL]     = "#555"
-	fg[PRELIGHT]   = "#777"
-	fg[SELECTED]   = "#777"
-	fg[ACTIVE]     = "#777"
+	fg[NORMAL]     = "#b8b8b8"
+	fg[PRELIGHT]   = "#b5b5b5"
+	fg[SELECTED]   = "#ccc"
+	fg[ACTIVE]     = "#ccc"
 	text[NORMAL]   = "#f5f5f5"
 	text[PRELIGHT] = "#ffffff"
 	text[ACTIVE]   = "#f5f5f5"
@@ -45,7 +45,7 @@ style "theme-panel"
 			function		= BOX
 			recolorable		= TRUE
 			state			= PRELIGHT
-			file			= "Panel/tabwin_item.png"
+			file			= "Panel/panel-button-hover.png"
 			border			= { 4, 4, 1, 1 }
 			stretch			= TRUE
 		}
@@ -55,7 +55,7 @@ style "theme-panel"
 			function		= BOX
 			recolorable		= TRUE
 			state			= ACTIVE
-			file			= "Panel/tabwin_item.png"
+			file			= "Panel/panel-button-active.png"
 			border			= { 4, 4, 1, 1 }
 			stretch			= TRUE
 		}

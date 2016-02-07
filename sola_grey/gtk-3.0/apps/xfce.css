@@ -36,7 +36,7 @@ XfceHeading,
 
 .xfce4-panel .button:hover,
 .xfce4-panel .button:active:hover {
-    background: url("file:///home/sola/.themes/sola_grey/gtk-2.0/apps/Panel/panel-button-hover.png");
+    background: url("file:///usr/share/themes/sola_grey/gtk-2.0/apps/Panel/panel-button-hover.png");
     background-size: 24px 24px;
 }
 
