@@ -22,14 +22,14 @@ style "theme-panel"
 	bg[SELECTED]   = shade (0.35, "#fff")
 	bg[INSENSITIVE]= "#fff"
 	bg[NORMAL]     = "#2b2b2b"
-	fg[NORMAL]     = "#b8b8b8"
+	fg[NORMAL]     = "#555"
 	fg[PRELIGHT]   = "#b5b5b5"
 	fg[SELECTED]   = "#ccc"
 	fg[ACTIVE]     = "#ccc"
 	text[NORMAL]   = "#f5f5f5"
 	text[PRELIGHT] = "#ffffff"
 	text[ACTIVE]   = "#f5f5f5"
-	#font_name      = "bold 12"
+	font_name      = "semi-bold 12"
 	
 	engine "pixmap"
 	{
