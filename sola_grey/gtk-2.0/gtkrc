@@ -839,12 +839,12 @@ style "xfsm-logout"
 
 	#bg_pixmap[NORMAL] = "xfsmlogout.png"
 
-	bg[NORMAL]      = "#333"
-	bg[SELECTED]	= "#333" # Border around the dialog
-	bg[PRELIGHT]	= "#292929"
-	bg[INSENSITIVE] = "#333"
-	fg[NORMAL]      = "#eee"
-	fg[PRELIGHT] 	= "#eee"
+	bg[NORMAL]      = "#c1c1c1" #	"#333"
+	bg[SELECTED]	= "#c1c1c1" # Border around the dialog
+	bg[PRELIGHT]	= "#eee"			#"#292929"
+	bg[INSENSITIVE] = "#c1c1c1"
+	fg[NORMAL]      = "#555"
+	fg[PRELIGHT] 	= "#555" #	"#eee"
 
 	engine "murrine"
 	{
@@ -865,13 +865,14 @@ style "xfsm-label"
 style "xfsm-button" = "button"
 {
 
-	bg[SELECTED]	= "#333"
-	bg[NORMAL]      = "#333"
-	bg[PRELIGHT]	= "#292929"
-	bg[ACTIVE] 		= shade (1.6, "#333")
-	bg[INSENSITIVE] = "#333"
-	fg[PRELIGHT] 	= "#eee"
-	fg[ACTIVE]		= "#eee"
+	bg[SELECTED]	= "#c1c1c1" #	"#333"
+	bg[NORMAL]      = "#c1c1c1"
+	bg[PRELIGHT]	= shade (0.9, "#c1c1c1") #	
+	bg[ACTIVE] 		= shade (0.8, "#c1c1c1") #	shade (1.2, "#333")
+	bg[INSENSITIVE] = "#c1c1c1"
+	fg[NORMAL]		= "#555"
+	fg[PRELIGHT] 	= "#555"
+	fg[ACTIVE]		= "#555"
 
 	engine "murrine"
 	{

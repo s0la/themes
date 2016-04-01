@@ -29,7 +29,7 @@ style "theme-panel"
 	text[NORMAL]   = "#f5f5f5"
 	text[PRELIGHT] = "#ffffff"
 	text[ACTIVE]   = "#f5f5f5"
-	font_name      = "semi-bold 12"
+	font_name      = "12"
 	
 	engine "pixmap"
 	{
