@@ -2,17 +2,17 @@
 # Theme: Greybird
 # based on "Bluebird" by Simon Steinbeiß and Pasi Lallinaho
 # Description: As is the original theme, this theme is 100% free and open source.
-gtk-color-scheme	= "bg_color:#CECECE\nselected_bg_color:#9bbbbe\nbase_color:#fcfcfc" # Background, base.
-gtk-color-scheme	= "fg_color:#555\nselected_fg_color:#ffffff\ntext_color:#555" # Foreground, text.
+
+gtk-color-scheme	= "bg_color:#CECECE\nselected_bg_color:#398ee7\nbase_color:#fcfcfc" # Background, base.
+gtk-color-scheme	= "fg_color:#3C3C3C\nselected_fg_color:#ffffff\ntext_color:#212121" # Foreground, text.
 gtk-color-scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
 gtk-color-scheme	= "link_color:#2d71b8" # Hyperlinks
 gtk-color-scheme	= "panel_bg:#686868" # Panel bg color
 gtk-color-scheme	= "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
 gtk-color-scheme	= "bg_color_dark:#686868\ntext_color_dark:#FFF"
 
-
 gtk-icon-sizes          = "panel-applications-menu=24,24:panel-menu=24,24:panel=16,16:gtk-button=16,16"
-gtk-button-images	= 0					# Disables icons for buttons with text
+gtk-button-images	= 1					# Disables icons for buttons with text
 gtk-toolbar-style	= 0					# Disables text in toolbar
 gtk-auto-mnemonics	= 1					# Disables ugly lines under menu items
 
@@ -32,7 +32,7 @@ style "default"
 	GtkButton		::child-displacement-x 			= 1
 	GtkButton		::child-displacement-y 			= 1
 	GtkButton		::default-border       			= { 0, 0, 0, 0 }
-	GtkCheckButton		::indicator-size       			= 14
+	GtkCheckButton		::indicator-size       			= 15
 
 	GtkEntry		::honors-transparent-bg-hint 		= 1
 	GtkEntry		::progress-border			= { 3, 3, 3, 3 }
@@ -40,34 +40,31 @@ style "default"
 
 	GtkImage		::x-ayatana-indicator-dynamic 		= 1
 
-	GtkMenu			::horizontal-padding			= 1
-	GtkMenu			::vertical-padding				= 1
+	GtkMenu			::horizontal-padding			= 0
+	GtkMenu			::vertical-padding			= 0
 
-	GtkPaned		::handle-size          			= 5
+	GtkPaned		::handle-size          			= 3
 
-	GtkNotebook		::tab-overlap				= 1
+	GtkNotebook		::tab-overlap				=-2
 
 	GtkProgressBar		::min-vertical-bar-width		= 10
 	GtkProgressBar		::min-horizontal-bar-height		= 10
 
-	GtkRange		::trough-border				= 0
-	GtkRange		::slider-width				= 17
-	GtkRange		::stepper-size				= 17
+	GtkRange		::trough-border				= 2
+	GtkRange		::slider-width				= 9
+	GtkRange		::stepper-size				= 13
 	GtkRange		::stepper_spacing			= 0
 
-	GtkScale		::slider-length				= 17
-	GtkScale		::slider-width				= 17
-	GtkScale		::trough-side-details			= 0
+	GtkScale		::slider-length				= 15
+	GtkScale		::slider-width				= 15
+	GtkScale		::trough-side-details			= 1
 
-	GtkScrollbar::trough-border = 0
-  	GtkRange::trough-border = 0
-  	GtkRange::slider-width = 6
-  	GtkRange::stepper-size = 0
-
-  	GtkScrollbar::activate-slider = 1
-  	GtkScrollbar::has-backward-stepper = 0
-  	GtkScrollbar::has-forward-stepper = 0
-  	GtkScrollbar::min-slider-length = 32
+	GtkScrollbar		::min-slider-length			= 50
+	GtkScrollbar		::slider-width				= 9
+	#GtkScrollbar		::activate-slider			= 1
+	GtkScrollbar		::trough-border				= 3
+	GtkScrollbar		::has-backward-stepper 			= 0
+	GtkScrollbar		::has-forward-stepper			= 0
 
 	GtkScrolledWindow	::scrollbar-spacing			= 0
 	GtkScrolledWindow	::scrollbars-within-bevel		= 1
@@ -78,8 +75,7 @@ style "default"
 	GtkExpander		::expander-size				= 12
 	GtkToolbar		::internal-padding			= 0
 	GtkTreeView		::expander-size				= 10
-	GtkTreeView		::vertical-separator			= 1
-	GtkSeparatorMenuItem	::horizontal-padding			= 0
+	GtkTreeView		::vertical-separator			= 0
 
 	GtkWidget		::focus-line-width			= 1
 	GtkWidget		::focus-padding				= 0
@@ -117,18 +113,18 @@ style "default"
 	engine "murrine"
 	{
 		animation           = FALSE
-		arrowstyle          = 0                 # 0 = normal arrows, 1 = filled arrows
-		border_shades       = {1.0, 0.8}      # gradient to draw on border
-		#cellstyle	    = 2
+		arrowstyle          = 2                 # 0 = normal arrows, 1 = filled arrows
+		border_shades       = { 1.2, 1.0 }      # gradient to draw on border
+		cellstyle	    = 0
 		colorize_scrollbar  = TRUE
 		comboboxstyle       = 0                 # 0 = normal combobox, 1 = colorized combobox below arrow
 		contrast            = 0.4               # 0.8 for less contrast, more than 1.0 for more contrast on borders
-		default_button_color = mix (0.2, shade(0.9,@base_color), shade (0.9, "#cecece"))
+		default_button_color = mix (0.2, shade(0.9,@base_color), shade (0.9, @selected_bg_color))
 		expanderstyle	    = 0
-		focus_color         = mix (0.2, shade(0.9,@base_color), shade (0.75, @selected_bg_color))
-		focusstyle	    	= 0
+		focus_color         = mix (0.1, @bg_color, shade (0.7, @selected_bg_color))
+		focusstyle	    = 3
 		glazestyle          = 1                 # 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
-		gradient_shades     = {1.1,1.1,0.95,0.95} #{1.1,1.0,1.0,0.87}
+		gradient_shades     = {1.2,1.0,1.0,0.9} #{1.1,1.0,1.0,0.87}
 		glowstyle           = 4                 # 0,1,2,3,4
 		glow_shade          = 1.1
 		handlestyle	    = 1
@@ -145,16 +141,16 @@ style "default"
 		progressbarstyle    = 0                 # 0 = nothing, 1 = stripes, 2 = lines
 		reliefstyle         = 3                 # 0 = flat, 1 = inset, 2 = shadow
 		rgba                = FALSE             # FALSE = disabled, TRUE = enabled
-		roundness           = 1                 # 0 = squared, 1 = old default, more will increase roundness
+		roundness           = 2                 # 0 = squared, 1 = old default, more will increase roundness
 		scrollbarstyle      = 0                 # 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
-		separatorstyle      = 1                 # 0 = Hard seperators 1 = Smooth seperators
+		separatorstyle      = 0                 # 0 = Hard seperators 1 = Smooth seperators
 		sliderstyle         = 0                 # 0 = nothing added, 1 = handles
 		stepperstyle        = 1                 # 0 = standard, 1 = integrated stepper handles, 2 = unknown
 		shadow_shades       = { 1.0, 1.0 }      # gradient for shadows.
 		textstyle           = 0                 # 0 = normal text, 1 = inset
 		toolbarstyle        = 1                 # 0 = flat, 1 = glassy, 2 = gradient
 		trough_shades	    = { 0.75, 0.9 }	# draw gradient on trough of GtkScrollbar and GtkProgressbar
-		trough_border_shades = { 0.9, 0.7 }
+		#trough_border_shades = { 0.9, 0.7 }
 	}
 }
 
@@ -165,11 +161,11 @@ style "resize-grip"
 			function	= RESIZE_GRIP
 			recolorable	= FALSE
 			detail		= "statusbar"
-			overlay_file	= "apps/Range/null.png"
+			overlay_file	= "resize_grip.png"
 			overlay_border	= {0,0,0,0 }
 			overlay_stretch	= FALSE
 		}
-        }
+    }
 }
 
 style "paned" = "default"
@@ -236,33 +232,29 @@ style "entry" = "wider"
 
 style "button" = "wider"
 {
-	bg[NORMAL]        = shade (1.06, @bg_color)
-	bg[PRELIGHT]      = shade (1.13, @bg_color)
+	bg[NORMAL]        = shade (1.02, @bg_color)
+	bg[PRELIGHT]      = shade (1.07, @bg_color)
 	bg[ACTIVE]        = shade (0.85, @bg_color)
-	bg[SELECTED]      = shade (1.0, @selected_bg_color)
+	bg[SELECTED]      = shade (0.5, @selected_bg_color)
 	bg[INSENSITIVE]   = shade (0.95, @bg_color)
 
-  	engine "murrine"
+	engine "murrine"
 	{
-		contrast            = 0.5
+		contrast            = 0.9
 		highlight_shade     = 1.0
-		#lightborder_shade   = 1.2
-		#gradient_shades     = {1.05,1.0,0.97,0.97}
-		border_shades       = { 1.0, 0.8 }
-		shadow_shades       = { 1.0,0.1 }    #more shadow { 1.0,0.1 }, less { 1.0,1.0 }
-		reliefstyle         = 2
-		roundness	    	= 0
-		textstyle           = 2
-		text_shade			= 1.0
-		comboboxstyle 		= 0
-		focusstyle			= 3
+		lightborder_shade   = 1.2
+		gradient_shades     = {1.05,1.0,0.97,0.97}
+		border_shades       = { 1.1, 0.9 }
+		shadow_shades       = {1.0,1.0}
+		reliefstyle         = 0
+		roundness	    = 2
 	}
 }
 
 style "notebook-button" = "notebook-bg"
 {
-	xthickness = 2 # Width of tabs and notebook borders.
-	ythickness = 2
+	xthickness = 3 # Width of tabs and notebook borders.
+	ythickness = 3
 }
 
 style "notebook-bg"
@@ -274,69 +266,49 @@ style "notebook-bg"
 
 style "notebook" = "notebook-bg"
 {
-	xthickness = 2 # Width of tabs and notebook borders.
-	ythickness = 2 # Height of tabs and notebook borders.
+	xthickness = 3 # Width of tabs and notebook borders.
+	ythickness = 3 # Height of tabs and notebook borders.
 
 	engine "murrine" {
-		contrast		= .8
-		gradient_shades   	= {1.28,1.17,0.92,0.87}
-		#highlight_shade   	= 1.0
-		focusstyle		= 2
-		lightborder_shade	= 1.16
+		contrast		= .6
+		gradient_shades		= {1.1,1.05,1.05,1.0}
+		#focusstyle		= 2
+		#lightborder_shade	= 1.16
 	}
 }
 
 style "menu"
 {
-	ythickness        = 0
+	ythickness        = 3
 	xthickness        = 0
-
 	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
-	GtkMenuItem :: arrow-scaling = 0.4
 
-	bg[SELECTED]      = shade (0.85, @selected_bg_color)
-	bg[NORMAL]        = @bg_color
-	bg[PRELIGHT]      = shade (0.85, @selected_bg_color)
-	bg[ACTIVE]        = @bg_color
-	bg[INSENSITIVE]   = @bg_color
-
-	fg[NORMAL]        = @text_color # Color for normal text.
-	fg[PRELIGHT]      = @selected_fg_color
-	fg[SELECTED]      = @selected_fg_color
-	fg[ACTIVE]        = @selected_fg_color
-	fg[INSENSITIVE]   = shade (0.75, @bg_color) # Text color for non-interactive menu items
-
+	bg[SELECTED]      = @selected_bg_color
+	bg[NORMAL]        = shade (1.18, @bg_color)
+	bg[PRELIGHT]      = @selected_bg_color
+	bg[ACTIVE]        = shade (1.18, @bg_color)
+	bg[INSENSITIVE]   = shade (1.18, @bg_color)
+	fg[NORMAL]        = @fg_color # Color for normal text.
+	fg[PRELIGHT]      = @base_color
+	fg[SELECTED]      = @base_color
+	fg[ACTIVE]        = @base_color
+	fg[INSENSITIVE]   = mix (0.4, @fg_color, @bg_color) # Text color for non-interactive menu items
 	text[NORMAL]      = @text_color # Color for menu-item radio/checks.
 	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
-	text[PRELIGHT]    = @selected_fg_color
-	text[SELECTED]    = @selected_fg_color
+	text[PRELIGHT]    = @base_color
+	text[SELECTED]    = @base_color
 	text[ACTIVE]      = @fg_color
-	text[INSENSITIVE] = shade (0.93, @bg_color)
+	text[INSENSITIVE] = mix (0.4, @fg_color, @bg_color)
 
 	engine "murrine"
 	{
-		contrast = 0.1
+		roundness = 0 # Roundness of menu items.
+		gradient_shades = {1.25,1.1,1.1,1.0}
+		contrast = 0.9
+		lightborder_shade = 1.5
 	}
 }
 
-style "menu_item"
-{
-  xthickness = 0
-  ythickness = 3
-
-  engine "murrine"
-	{
-		border_shades = { 1.3, 1.2 }
-		contrast = 0.5
-	}
-}
-
-style "menu_framed_box"
-{
-	engine "murrine"
-	{
-    }
-}
 
 style "menubar" = "menu"
 {
@@ -366,33 +338,30 @@ style "menubar-menuitem"
 	text[SELECTED] = @base_color
 
 	engine "murrine"
-        {
-		contrast = 0.3    # for no borders, set contrast to 0.0 and border_shades to { 1.0, 1.0 }
-		border_shades = { 1.0, 1.1 }
-		lightborder_shade = 0.5
-        }
+    {
+		lightborder_shade = 1.5
+    }
 }
 
 style "separator-menu-item"
 {
 	xthickness = 1
 	ythickness = 0
-	engine "murrine"
-	{
-		contrast = 0.0
-		separatorstyle = 1
-	}
+
+	GtkSeparatorMenuItem::horizontal-padding = 2
+
+	GtkWidget::wide-separators	= 1
+	GtkWidget::separator-width	= 1
+	GtkWidget::separator-height	= 7
 }
 
 style "treeview"
 {
-	#GtkTreeView::odd_row_color   = "#ffffff"      #uncomment for blank background, without rows color
-	GtkTreeView::row_ending_details = 0
 	bg[NORMAL]	= @bg_color
-  	engine "murrine"
+	engine "murrine"
 	{
 		roundness = 0
-		#gradient_shades     = {1.3,1.2,1.2,1.1}
+		gradient_shades     = {1.3,1.2,1.2,1.1}
 	}
 }
 
@@ -401,20 +370,14 @@ style "treeview-header" = "button"
 	xthickness   = 2
 	ythickness   = 1
 
-	bg[NORMAL]   = shade (0.98, @bg_color)  # Color for treeview headers.
-	bg[PRELIGHT] = shade (1.10, @bg_color)  # Color for treeview header prelight.
-	bg[ACTIVE]   = shade (0.85, @bg_color)  # Color for pressed-treeview.
+	bg[NORMAL]	= shade (1.14, @bg_color)  # Color for treeview headers.
+	bg[PRELIGHT]	= shade (0.98, @bg_color)  # Color for treeview header prelight.
+	bg[ACTIVE]	= shade (0.85, @bg_color)  # Color for pressed-treeview.
 
 	engine "murrine"
 	{
 		roundness = 0  # This makes treeview progressbars square.
-		contrast            = .8
-		highlight_shade     = 1.00
-		#lightborder_shade   = 1.9
-		border_shades       = { 1.0, 1.0 }
-		shadow_shades       = {0.5,0.0}
-		reliefstyle         = 2
-		gradient_shades     = {1.1,1.05,0.99,0.95}
+		gradient_shades = {0.98,1.0,1.3,1.35}
 	}
 }
 
@@ -425,16 +388,16 @@ style "frame-title"
 
 style "tooltips" = "wider"
 {
-	xthickness = 1
+	xthickness = 7
 	ythickness = 4
 
-	bg[NORMAL]	= "#eeeeee"
-	bg[SELECTED]	= "#eeeeee"
-	fg[NORMAL]	= "#333333"
+	bg[NORMAL]	= @tooltip_bg_color
+	bg[SELECTED]	= "#000000"
+	fg[NORMAL]	= @tooltip_fg_color
 
 	engine "murrine"
 	{
-		roundness	= 1
+		roundness	= 5
 		rgba		= TRUE
 	}
 }
@@ -445,17 +408,17 @@ style "progressbar"
 	ythickness   = 0
 
 	fg[PRELIGHT]	= @selected_fg_color
-	bg[NORMAL]	= shade (0.95, @bg_color)
-	bg[SELECTED]	= shade (0.95, @selected_bg_color)
+	bg[NORMAL]	= shade (1.05, @bg_color)
+	bg[SELECTED]	= shade (1.05, @selected_bg_color)
 
 	engine "murrine"
 	{
-		gradient_shades = {1.0,1.0,1.0,1.0}
-		trough_shades	= {0.95, 1.1}
-		trough_border_shades	= { 1.0, 0.7 }
-		roundness 	= 1
+		gradient_shades = {1.15,1.05,1.0,0.95}
+		trough_shades	= {0.95, 1.15}
+		trough_border_shades	= { 0.8, 0.7 }
+		roundness 	= 4
 		contrast	= 0.8
-		border_shades	= { 1.0, 1.0 }
+		border_shades	= { 1.0, 0.8 }
 		lightborder_shade   = 1.1
 		glowstyle	= 0
 		glow_shade	= 1.0
@@ -464,134 +427,24 @@ style "progressbar"
 
 style "scrollbar"
 {
-    engine "pixmap" {
+	GtkScrollbar::stepper-size	= 0
+	GtkScrollbar::arrow-scaling	= 0.0
 
-    image {
-      function = BOX
-      detail = "trough"
-      file = "apps/Scrollbars/trough-scrollbar-horiz.png"
-      border = { 4, 4, 4, 4 }
-      stretch = TRUE
-      orientation = HORIZONTAL
-    }
+	bg[NORMAL]	= @bg_color
 
-    image {
-      function = BOX
-      detail = "trough"
-      file = "apps/Scrollbars/trough-scrollbar-vert.png"
-      border = { 4, 4, 9, 9 }
-      stretch = TRUE
-      orientation = VERTICAL
-    }
+	bg[ACTIVE]	= shade (1.75, @base_color)
+	bg[PRELIGHT]	= shade (0.8, @bg_color)
+	bg[INSENSITIVE]	= shade (0.75, @bg_color)
 
-    image {
-      function = ARROW
-      overlay_file = "apps/Range/null.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = FALSE
-      arrow_direction = UP
-    }
-
-    image {
-      function = ARROW
-      overlay_file = "apps/Range/null.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = FALSE
-      arrow_direction = DOWN
-    }
-
-    image {
-      function = ARROW
-      overlay_file = "apps/Range/null.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = FALSE
-      arrow_direction = LEFT
-    }
-
-    image {
-      function = ARROW
-      overlay_file = "apps/Range/null.png"
-      overlay_border = { 0, 0, 0, 0 }
-      overlay_stretch = FALSE
-      arrow_direction = RIGHT
-    }
-
-    # Sliders
-
-    image {
-      function = SLIDER
-      state = NORMAL
-      file = "apps/Scrollbars/slider-horiz.png"
-      border = { 9, 9, 5, 5 }
-      stretch = TRUE
-      orientation = HORIZONTAL
-    }
-
-    image {
-      function = SLIDER
-      state = ACTIVE
-      file = "apps/Scrollbars/slider-horiz-active.png"
-      border = { 9, 9, 5, 5 }
-      stretch = TRUE
-      orientation = HORIZONTAL
-    }
-
-    image {
-      function = SLIDER
-      state = PRELIGHT
-      file = "apps/Scrollbars/slider-horiz-prelight.png"
-      border = { 9, 9, 5, 5 }
-      stretch = TRUE
-      orientation = HORIZONTAL
-    }
-
-    image {
-      function = SLIDER
-      state = INSENSITIVE
-      file = "apps/Scrollbars/slider-horiz-insens.png"
-      border = { 9, 9, 5, 5 }
-      stretch = TRUE
-      orientation = HORIZONTAL
-    }
-
-# X Verticals
-
-    image {
-      function = SLIDER
-      state = NORMAL
-      file = "apps/Scrollbars/slider-vert.png"
-      border = { 5, 5, 9, 9 }
-      stretch = TRUE
-      orientation = VERTICAL
-    }
-
-    image {
-      function = SLIDER
-      state = ACTIVE
-      file = "apps/Scrollbars/slider-vert-active.png"
-      border = { 5, 5, 9, 9 }
-      stretch = TRUE
-      orientation = VERTICAL
-    }
-
-    image {
-      function = SLIDER
-      state = PRELIGHT
-      file = "apps/Scrollbars/slider-vert-prelight.png"
-      border = { 5, 5, 9, 9 }
-      stretch = TRUE
-      orientation = VERTICAL
-    }
-
-    image {
-      function = SLIDER
-      state = INSENSITIVE
-      file = "apps/Scrollbars/slider-vert-insens.png"
-      border = { 5, 5, 9, 9 }
-      stretch = TRUE
-      orientation = VERTICAL
-    }
-  }
+	engine "murrine"
+	{
+		colorize_scrollbar	= FALSE
+		roundness	= 10
+		border_shades	= {0.75, 0.75}
+		trough_shades	= {1.1, 1.3}
+		contrast	= 0.05
+		gradient_shades	= {1.06,1.06,1.04,1.04}
+	}
 }
 
 style "hscrollbar" {
@@ -625,14 +478,14 @@ style "comboboxentry"
 	{
 		contrast = 0.4
 		reliefstyle = 0
-		border_shades = {1.00,0.7}
+		border_shades = {1.03,0.8}
 		shadow_shades = {0.5,0.0}
 	}
 }
 
 style "combo" = "comboboxentry"
 {
-	bg[ACTIVE] = shade (0.85, "#dcdcdc") # Color for pressed-spinbuttons.
+	bg[ACTIVE] = shade (0.85, @bg_color) # Color for pressed-spinbuttons.
 }
 
 style "spin" = "combo"
@@ -650,8 +503,8 @@ style "scale" = "button"
 
 	bg[ACTIVE]		= shade (0.86, @bg_color)
 	bg[NORMAL]		= shade (1.30, @bg_color)
-	bg[PRELIGHT]		= mix (0.4, shade (1.45, @selected_bg_color), shade (1.30, @bg_color))
-	bg[SELECTED]		= shade (1.10, "#b1b1b1")
+	bg[PRELIGHT]		= mix (0.4, shade (0.9, @selected_bg_color), shade (1.05, @bg_color))
+	bg[SELECTED]		= shade (0.9, @selected_bg_color)
 	bg[INSENSITIVE]		= shade (0.98, @bg_color)
 
 	engine "murrine"
@@ -684,7 +537,7 @@ style "radiocheck"
 	fg[ACTIVE]	= @fg_color
 	fg[INSENSITIVE] = mix (0.4, @fg_color, @bg_color)
 
-  	engine "murrine"
+	engine "murrine"
 	{
 		border_shades		= { 0.9, 0.8 }
 		contrast		= 0.8
@@ -723,6 +576,12 @@ style "infobar" {
 	}
 }
 
+style "iconview" {
+    engine "murrine" {
+        focusstyle = 1
+    }
+}
+
 style "nautilus_location" {
 	bg[NORMAL]  = mix (0.60, shade (1.05, @bg_color), @selected_bg_color)
 }
@@ -739,89 +598,56 @@ style "xfce-header"
 
 style "xfwm-tabwin"
 {
-	Xfwm4TabwinWidget::border-width = 0
-  	Xfwm4TabwinWidget::border-alpha = 0
-	Xfwm4TabwinWidget::icon-size = 90
-	Xfwm4TabwinWidget::listview-icon-size = 48
-  	Xfwm4TabwinWidget::alpha = 0.75
+	Xfwm4TabwinWidget::border-width = 1
+	Xfwm4TabwinWidget::border-alpha = 0.9
+	Xfwm4TabwinWidget::icon-size = 64
+	Xfwm4TabwinWidget::listview-icon-size = 16
+	Xfwm4TabwinWidget::preview-size = 512
+	Xfwm4TabwinWidget::alpha = 0.8
+	Xfwm4TabwinWidget::border-radius = 10
 
-  	Xfwm4TabwinWidget::border-radius = 1
+	bg[NORMAL]	= shade (0.35, @bg_color_dark)
+	bg[ACTIVE]	= shade (0.65, @selected_bg_color)
+	bg[PRELIGHT]	= shade (0.85, @selected_bg_color)
+	bg[SELECTED]	= shade (0.45, @bg_color_dark)
 
-	bg[NORMAL]		= shade (0.7, "#2d2d2d")	#blue-ish "699098"	#initial color (0.5, "#9bbbbe")		#(1.0, "#b3b3b3")
+	fg[NORMAL]	= shade (0.8, @base_color)
+	fg[ACTIVE]	= @base_color
+	fg[PRELIGHT]	= @base_color
 
-	font_name = "bold 0"
-	fg[NORMAL]		= "#c1c1c1"	#"#333"
-	fg[ACTIVE]		= "#c1c1c1"
-	fg[PRELIGHT]	= "#c1c1c1"
-	fg[SELECTED]	= "#c1c1c1"
-
-	engine "pixmap"
-	{
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= NORMAL
-		}
-		
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= PRELIGHT
-			file			= "apps/Panel/tabwin_item_11.png"
-			border			= { 4, 4, 1, 1 }
-			stretch			= TRUE
-		}
-		
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= ACTIVE
-			file			= "apps/Panel/tabwin_item_11.png"
-			border			= { 4, 4, 1, 1 }
-			stretch			= TRUE
-		}
-
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= SELECTED
-			file			= "apps/Panel/tabwin_item_11.png"
-			border			= { 4, 4, 1, 1 }
-			stretch			= TRUE
-		}
- 
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= INSENSITIVE
-		}
-	}	
+	engine "murrine" {
+		roundness	    = 6
+		contrast            = 0.8
+		highlight_shade     = 1.00
+		lightborder_shade   = 1.0
+		gradient_shades     = {0.9,1.2,1.2,1.4}
+		border_shades       = { 3.5, 3.5 }
+		reliefstyle         = 0
+		shadow_shades	    = { 1.3, 1.7 }
+		textstyle = 1
+		text_shade = 0.25
+	}
 }
 
 style "xfwm-tabwin-button"
 {
-	font_name = "bold 0"
+	font_name = "bold"
 }
 
 style "xfdesktop-icon-view"
 {
 	XfdesktopIconView::label-alpha = 0
 	XfdesktopIconView::selected-label-alpha = 80
-	XfdesktopIconView::tooltip-size = 80
 	XfdesktopIconView::shadow-x-offset = 0
-	XfdesktopIconView::shadow-y-offset = 0
+	XfdesktopIconView::shadow-y-offset = 1
 	XfdesktopIconView::selected-shadow-x-offset = 0
-	XfdesktopIconView::selected-shadow-y-offset = 0
-	XfdesktopIconView::shadow-color = @tooltip_bg_color
-	XfdesktopIconView::selected-shadow-color = @tooltip_bg_color
-	XfdesktopIconView::cell-spacing = 0
-	XfdesktopIconView::cell-padding = 3
-	XfdesktopIconView::cell-text-width-proportion = 1.5
+	XfdesktopIconView::selected-shadow-y-offset = 1
+	XfdesktopIconView::shadow-color = shade(1.5, @tooltip_bg_color)
+	XfdesktopIconView::selected-shadow-color = shade(1.8, @tooltip_bg_color)
+        XfdesktopIconView::shadow-blur-radius = 2
+	XfdesktopIconView::cell-spacing = 2
+	XfdesktopIconView::cell-padding = 6
+	XfdesktopIconView::cell-text-width-proportion = 1.9
 
 	fg[NORMAL] = shade (0.9, @selected_fg_color)
 	fg[ACTIVE] = @selected_fg_color
@@ -833,18 +659,15 @@ style "xfdesktop-icon-view"
 
 style "xfsm-logout"
 {
-	GtkDialog::content-area-border = 2
-	GtkDialog::content-area-spacing = 2
+	GtkDialog::content-area-border = 12
+	GtkDialog::content-area-spacing = 6
 	GtkDialog::action-area-spacing = 0
 
-	#bg_pixmap[NORMAL] = "xfsmlogout.png"
+	bg_pixmap[NORMAL] = "xfsmlogout.png"
 
-	bg[NORMAL]      = "#c1c1c1" #	"#333"
-	bg[SELECTED]	= "#c1c1c1" # Border around the dialog
-	bg[PRELIGHT]	= "#eee"			#"#292929"
-	bg[INSENSITIVE] = "#c1c1c1"
-	fg[NORMAL]      = "#555"
-	fg[PRELIGHT] 	= "#555" #	"#eee"
+	bg[NORMAL]      = @bg_color
+	bg[SELECTED]	= shade (1.18, @bg_color) # Border around the dialog
+	fg[NORMAL]      = @fg_color
 
 	engine "murrine"
 	{
@@ -864,19 +687,9 @@ style "xfsm-label"
 
 style "xfsm-button" = "button"
 {
-
-	bg[SELECTED]	= "#c1c1c1" #	"#333"
-	bg[NORMAL]      = "#c1c1c1"
-	bg[PRELIGHT]	= shade (0.9, "#c1c1c1") #	
-	bg[ACTIVE] 		= shade (0.8, "#c1c1c1") #	shade (1.2, "#333")
-	bg[INSENSITIVE] = "#c1c1c1"
-	fg[NORMAL]		= "#555"
-	fg[PRELIGHT] 	= "#555"
-	fg[ACTIVE]		= "#555"
-
 	engine "murrine"
 	{
-
+		textstyle = 0
 	}
 }
 
@@ -946,9 +759,7 @@ widget_class "*<GtkEntry>*"		style "wider"
 
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar-menuitem"
 widget_class "*<GtkMenu>*"              style "menu"
-widget_class "*<GtkMenu>*"              style "menu_framed_box"
-widget_class "*<GtkMenuItem>*"          style "menu_item"
-widget_class "*<GtkMenuBar>*"			style "menubar"
+widget_class "*<GtkMenuBar>*"		style "menubar"
 widget_class "*<GtkSeparatorMenuItem>*" style "separator-menu-item"
 # Scale widget in menus (e.g. ubuntu's sound indicator)
 widget_class "*<GtkMenuItem>.*.<GtkScale>" style "scale"
@@ -975,6 +786,7 @@ widget_class "*.<GtkCList>.<GtkButton>"	style "treeview-header"
 widget_class "*GnmSimpleCanvas*"		style "treeview-header" # Gnumeric treeview-headers
 
 # Xfce specific theming
+widget_class "*ExoIconView*"        style "iconview"
 widget_class "*XfceHeading*"		style "xfce-header"
 widget "xfwm4-tabwin*"			style "xfwm-tabwin"
 widget "xfwm4-tabwin*GtkButton*"		style "xfwm-tabwin-button"
@@ -1044,12 +856,10 @@ widget_class "*<GtkCList>"		style "fg-is-text-color-workaround"
 widget_class "*<EelEditableLabel>"	style "fg-is-text-color-workaround"
 
 # panel theming
-include "apps/panel.rc"
+include "apps/xfce-panel.rc"
 # application specific theming
-#include "apps/scrollbar.rc"
 include "apps/chromium.rc"
 include "apps/claws-mail.rc"
 include "apps/gmusicbrowser.rc"
 include "apps/terminal.rc"
 include "apps/thunar.rc"
-include "apps/range.rc"
