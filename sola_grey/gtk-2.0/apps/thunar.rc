@@ -2,7 +2,7 @@ style "sidepane"
 {
 	GtkTreeView::vertical-separator = 4
 
-	base[NORMAL]		= "#353945"		#"#d4dae1"
+	base[NORMAL]		= "#d4dae1"
 	base[INSENSITIVE]	= "#eeeeee"
 
 	text[NORMAL]		= mix (0.7, @text_color, @base_color)
@@ -15,7 +15,7 @@ style "sidepane"
 		function	= FLAT_BOX
 		state		= SELECTED
 	    recolorable	= TRUE
-		file		= "thunar/sidebar_active_dark_simetric.png"		
+		file		= "thunar/sidebar_active.png"		
 		border		= { 0, 0, 0, 0 }
 		stretch		= TRUE
         	}
@@ -23,7 +23,7 @@ style "sidepane"
 	image {
 		function	= FOCUS
 		recolorable	= TRUE
-		file		= "thunar/sidebar_active_dark_simetric.png"
+		file		= "thunar/sidebar_active.png"
 		border		= { 0, 0, 0, 0 }
 		stretch		= TRUE
 		} 

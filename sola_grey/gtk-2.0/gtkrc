@@ -739,15 +739,15 @@ style "xfce-header"
 
 style "xfwm-tabwin"
 {
-	Xfwm4TabwinWidget::border-width = 0
+	Xfwm4TabwinWidget::border-width = 1
   	Xfwm4TabwinWidget::border-alpha = 0
-	Xfwm4TabwinWidget::icon-size = 90
+	Xfwm4TabwinWidget::icon-size = 85
 	Xfwm4TabwinWidget::listview-icon-size = 48
-  	Xfwm4TabwinWidget::alpha = 0.75
+  	Xfwm4TabwinWidget::alpha = 0.9
 
   	Xfwm4TabwinWidget::border-radius = 1
 
-	bg[NORMAL]		= shade (0.7, "#2d2d2d")	#blue-ish "699098"	#initial color (0.5, "#9bbbbe")		#(1.0, "#b3b3b3")
+	bg[NORMAL]		= shade (0.7, "#699098")	#initial color (0.5, "#9bbbbe")		#(1.0, "#b3b3b3")
 
 	font_name = "bold 0"
 	fg[NORMAL]		= "#c1c1c1"	#"#333"
@@ -769,7 +769,7 @@ style "xfwm-tabwin"
 			function		= BOX
 			recolorable		= TRUE
 			state			= PRELIGHT
-			file			= "apps/Panel/tabwin_item_11.png"
+			file			= "apps/Panel/tabwin_grey25.png"
 			border			= { 4, 4, 1, 1 }
 			stretch			= TRUE
 		}
@@ -779,7 +779,7 @@ style "xfwm-tabwin"
 			function		= BOX
 			recolorable		= TRUE
 			state			= ACTIVE
-			file			= "apps/Panel/tabwin_item_11.png"
+			file			= "apps/Panel/tabwin_grey25.png"
 			border			= { 4, 4, 1, 1 }
 			stretch			= TRUE
 		}
@@ -789,7 +789,7 @@ style "xfwm-tabwin"
 			function		= BOX
 			recolorable		= TRUE
 			state			= SELECTED
-			file			= "apps/Panel/tabwin_item_11.png"
+			file			= "apps/Panel/tabwin_grey25.png"
 			border			= { 4, 4, 1, 1 }
 			stretch			= TRUE
 		}
@@ -839,12 +839,12 @@ style "xfsm-logout"
 
 	#bg_pixmap[NORMAL] = "xfsmlogout.png"
 
-	bg[NORMAL]      = "#c1c1c1" #	"#333"
+	bg[NORMAL]      = "#c1c1c1"
 	bg[SELECTED]	= "#c1c1c1" # Border around the dialog
-	bg[PRELIGHT]	= "#eee"			#"#292929"
+	bg[PRELIGHT]	= "#b2b2b2"
 	bg[INSENSITIVE] = "#c1c1c1"
-	fg[NORMAL]      = "#555"
-	fg[PRELIGHT] 	= "#555" #	"#eee"
+	fg[NORMAL]      = "#333"
+	fg[PRELIGHT] 	= "#333"
 
 	engine "murrine"
 	{
@@ -865,14 +865,13 @@ style "xfsm-label"
 style "xfsm-button" = "button"
 {
 
-	bg[SELECTED]	= "#c1c1c1" #	"#333"
+	bg[SELECTED]	= "#c1c1c1"
 	bg[NORMAL]      = "#c1c1c1"
-	bg[PRELIGHT]	= shade (0.9, "#c1c1c1") #	
-	bg[ACTIVE] 		= shade (0.8, "#c1c1c1") #	shade (1.2, "#333")
+	bg[PRELIGHT]	= "#e5e5e5"
+	bg[ACTIVE] 		= shade (1.2, "#c1c1c1")
 	bg[INSENSITIVE] = "#c1c1c1"
-	fg[NORMAL]		= "#555"
-	fg[PRELIGHT] 	= "#555"
-	fg[ACTIVE]		= "#555"
+	fg[PRELIGHT] 	= "#333"
+	fg[ACTIVE]		= "#333"
 
 	engine "murrine"
 	{

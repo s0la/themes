@@ -40,8 +40,8 @@ style "default"
 
 	GtkImage		::x-ayatana-indicator-dynamic 		= 1
 
-	GtkMenu			::horizontal-padding			= 1
-	GtkMenu			::vertical-padding				= 1
+	GtkMenu			::horizontal-padding			= 0
+	GtkMenu			::vertical-padding				= 0
 
 	GtkPaned		::handle-size          			= 5
 
@@ -128,7 +128,7 @@ style "default"
 		focus_color         = mix (0.2, shade(0.9,@base_color), shade (0.8, "#cecece"))
 		focusstyle	    = 0
 		glazestyle          = 1                 # 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
-		gradient_shades     = {1.1,1.1,0.95,0.95} #{1.1,1.0,1.0,0.87}
+		gradient_shades     = {1.0,1.0,1.0,1.0} #{1.1,1.0,1.0,0.87}
 		glowstyle           = 4                 # 0,1,2,3,4
 		glow_shade          = 1.1
 		handlestyle	    = 1
@@ -304,6 +304,18 @@ style "menu"
 	fg[SELECTED]      = @selected_fg_color
 	fg[ACTIVE]        = @selected_fg_color
 	fg[INSENSITIVE]   = shade (0.75, @bg_color) # Text color for non-interactive menu items
+
+	bg[SELECTED]      = "#222"
+	bg[NORMAL]        = "#242424"
+	bg[PRELIGHT]      = "#222"
+	bg[ACTIVE]        = "#222"
+	bg[INSENSITIVE]   = "#222"
+
+	fg[NORMAL]        = "#777" # Color for normal text.
+	fg[PRELIGHT]      = "#9bbbbe"
+	fg[SELECTED]      = "#9bbbbe"
+	fg[ACTIVE]        = "#9bbbbe"
+
 	text[NORMAL]      = "#777" # Color for menu-item radio/checks.
 	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
 	text[PRELIGHT]    = @selected_fg_color
@@ -313,15 +325,16 @@ style "menu"
 	
 	engine "murrine" 
 	{
-		border_shades = { 1.3, 1.2 }
-		contrast = 0.5
+		textstyle = 0
+		border_shades = { 1.0, 1.0 }
+		contrast = 0.0
 	}
 }
 
 style "menu_item"
 {
   xthickness = 0
-  ythickness = 3
+  ythickness = 2
   
   #bg[PRELIGHT] = @selected_bg_color
   #fg[PRELIGHT] = "#1e1e1e"
@@ -332,7 +345,7 @@ style "menu_framed_box"
 {
 	engine "murrine"
 	{
-        }
+    }
 }
 
 style "menubar" = "menu"
@@ -377,7 +390,7 @@ style "separator-menu-item"
 	ythickness = 1
 	engine "murrine" 
 	{
-		contrast = 0.3
+		contrast = 0.0
 		separatorstyle = 1
 	}
 }
@@ -976,7 +989,7 @@ style "chrome-gtk-frame" {
 	ChromeGtkFrame::incognito-inactive-frame-color = "#333"
 
 	ChromeGtkFrame::incognito-frame-gradient-size = 0
-	ChromeGtkFrame::incognito-frame-gradient-color = "#333"
+	ChromeGtkFrame::incognito-frame-gradient-color = @titlebar_bg_color
 
 	ChromeGtkFrame::scrollbar-trough-color = @bg_color
 	ChromeGtkFrame::scrollbar-slider-normal-color =  mix (0.21, @fg_color, @bg_color)

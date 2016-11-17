@@ -25,9 +25,16 @@ style "terminal-scrollbar"
 
 style "terminal-notebook" = "dark"
 {
-	bg[NORMAL]	= shade (1.08, @bg_color) # Tab background.
-	bg[ACTIVE]	= shade (0.98, @bg_color) # Unfocused tab background.
-	fg[ACTIVE]	= shade (0.86, @bg_color)
+	#bg[NORMAL]	= shade (1.08, @bg_color) # Tab background.
+	#bg[ACTIVE]	= shade (0.98, @bg_color) # Unfocused tab background.
+
+	bg[NORMAL]        = shade (1.06, "#333") 
+	bg[PRELIGHT]      = shade (1.25, "#333")
+	bg[ACTIVE]        = shade (0.85, "#333")
+	bg[SELECTED]      = shade (1.0, "#333")  
+	bg[INSENSITIVE]   = shade (0.95, "#333")
+	
+	#fg[ACTIVE]	= shade (0.86, @bg_color)
 	base[NORMAL]	= @text_color
 	engine "murrine"
 	{

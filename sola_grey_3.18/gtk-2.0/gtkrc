@@ -300,6 +300,12 @@ style "menu"
 	bg[ACTIVE]        = @bg_color
 	bg[INSENSITIVE]   = @bg_color
 
+	#bg[SELECTED]      = "#222222"
+	#bg[NORMAL]        = "#262626"
+	#bg[PRELIGHT]      = "#222222"
+	#bg[ACTIVE]        = "#262626"
+	#bg[INSENSITIVE]   = "#262626"
+
 	fg[NORMAL]        = @text_color # Color for normal text.
 	fg[PRELIGHT]      = @selected_fg_color
 	fg[SELECTED]      = @selected_fg_color
