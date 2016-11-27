@@ -301,17 +301,18 @@ style "menu"
 	bg[ACTIVE]        = "#9bbbbe"
 	bg[INSENSITIVE]   = "#383a3b"
 
-	fg[NORMAL]        = "#777" # Color for normal text.
+	fg[NORMAL]        = "#949494"
 	fg[PRELIGHT]      = "#F5F6F7"
 	fg[SELECTED]      = "#F5F6F7"
 	fg[ACTIVE]        = "#F5F6F7"
+	fg[INSENSITIVE]   = @text_color
 
 	text[NORMAL]      = @text_color # Color for menu-item radio/checks.
 	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
 	text[PRELIGHT]    = @selected_fg_color
 	text[SELECTED]    = @selected_fg_color
 	text[ACTIVE]      = @fg_color
-	text[INSENSITIVE] = shade (0.93, @bg_color)
+	text[INSENSITIVE] = shade (0.93, "#65ab95")
 
 	engine "murrine"
 	{
@@ -322,7 +323,7 @@ style "menu"
 style "menu_item"
 {
   xthickness = 0
-  ythickness = 1
+  ythickness = 2
 
   engine "murrine"
 	{
@@ -375,8 +376,11 @@ style "menubar-menuitem"
 
 style "separator-menu-item"
 {
-	xthickness = 1
+	xthickness = 0
 	ythickness = 0
+
+	GtkWidget::separator-height = 0
+
 	engine "murrine"
 	{
 		contrast = 0.0
@@ -891,6 +895,21 @@ style "calendar"
 ###############################################################################
 # The following part of the gtkrc applies the different styles to the widgets.
 ###############################################################################
+
+style "chrome-gtk-frame"
+{
+	ChromeGtkMenu::bg-color = "#383a3b"
+
+    ChromeGtkFrame::frame-color = shade (0.5, @bg_color)
+    ChromeGtkFrame::inactive-frame-color = shade (0.5, @bg_color)
+    ChromeGtkFrame::frame-gradient-size = 100
+    ChromeGtkFrame::frame-gradient-color = shade (1.08,@bg_color)
+    ChromeGtkFrame::inactive-frame-gradient-color = shade (1.08,@bg_color)
+    ChromeGtkFrame::scrollbar-trough-color = @base_color
+    ChromeGtkFrame::scrollbar-slider-prelight-color = @panel_bg
+    ChromeGtkFrame::scrollbar-slider-normal-color = shade (1.4, @panel_bg)
+}
+class "ChromeGtkFrame" style "chrome-gtk-frame"
 
 class "GtkWindow*" style "resize-grip"
 

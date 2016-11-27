@@ -1103,7 +1103,7 @@ GtkInfoBar {
 GtkTreeMenu.menu,
 GtkMenuToolButton.menu,
 GtkComboBox .menu {
-    background-color: @bg_color;
+    background-color: #383a3b;
 }
 
 .primary-toolbar .menu,
@@ -1113,18 +1113,18 @@ GtkComboBox .menu {
 .header-bar .menu,
 .header-bar .primary-toolbar .menu,
 .menu {
-    padding: 1;
+    padding: 0;
     border-radius: 0;
-    border-width: 1px;
+    border-width: 0px;
     border-style: none;
     
-    background-color: @bg_color;
+    background-color: #383a3b;
     color: @menu_fg_color;
 }
 
 /* Hover-effect on play-button in ubuntu soundmenu */
 .menu:selected {
-    background-color: shade (0.85, @selected_bg_color);
+    background-color: @selected_bg_color;
 }
 
 .menu.button:hover,
@@ -1133,7 +1133,7 @@ GtkComboBox .menu {
 .menu.button:insensitive,
 .menu.button {
     border-width: 0;
-    background-color: @menu_bg_color;
+    background-color: #383a3b;
     background-image: none;
 }
 
@@ -1174,11 +1174,12 @@ GtkComboBox .menu {
 
 .menubar.menuitem:hover,
 .menubar .menuitem:hover {
-    border-color: shade(@theme_selected_bg_color, 0.85);
+    /*border-color: shade(@theme_selected_bg_color, 0.85);
     background-image: linear-gradient(to bottom,
                                       shade(@theme_selected_bg_color, 0.85),
                                       shade(@theme_selected_bg_color, 0.85)
-                                      );
+                                      );*/
+    background-image: @theme_selected_bg_color;
 
     color: @theme_selected_fg_color;
 }
@@ -1199,23 +1200,23 @@ GtkTreeMenu .menuitem {
 .menu .menuitem {
     -GtkMenuItem-arrow-scaling: 0.4;
 
-    padding: 3px;
+    padding: 1px;
     border-width: 0px;
     border-style: solid;
     border-color: transparent;
     border-radius: 0;
     background-color: transparent;
     background-image: none;
-    color: @text_color;
+    color: mix(@menu_fg_color, @menu_bg_color, 0.4);
 }
 
 .menu .menuitem:active,
 .menu .menuitem:hover {
-    border-color: shade(@theme_selected_bg_color, 0.8);
+    /*border-color: shade(@theme_selected_bg_color, 0.8);
     background-image: linear-gradient(to bottom,
                             shade(@theme_selected_bg_color, 0.95),
-                            shade(@theme_selected_bg_color, 0.85)); 
-    
+                            shade(@theme_selected_bg_color, 0.85)); */
+	background-color: @theme_selected_bg_color;
 }
 
 .menu .menuitem:active,
@@ -1227,7 +1228,7 @@ GtkTreeMenu .menuitem {
 
 .menu .menuitem:insensitive,
 .menu .menuitem *:insensitive {
-    color: mix(@menu_fg_color, @menu_bg_color, 0.4);
+    color: @text_color;
 }
 
 .menuitem.check,
