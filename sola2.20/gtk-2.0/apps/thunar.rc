@@ -1,0 +1,50 @@
+style "sidepane"
+{
+	GtkTreeView::vertical-separator = 4
+
+	base[NORMAL]		= "#353945"		#"#d4dae1"
+	base[INSENSITIVE]	= "#eeeeee"
+
+	text[NORMAL]		= mix (0.7, @text_color, @base_color)
+	text[ACTIVE]		= mix (0.7, @text_color, @base_color)
+	text[SELECTED]		= mix (0.7, @text_color, @base_color)
+
+	engine "pixmap" {
+		
+	image {
+		function	= FLAT_BOX
+		state		= SELECTED
+	    recolorable	= TRUE
+		file		= "thunar/sidebar_active_dark_simetric.png"		
+		border		= { 0, 0, 0, 0 }
+		stretch		= TRUE
+        	}
+	
+	image {
+		function	= FOCUS
+		recolorable	= TRUE
+		file		= "thunar/sidebar_active_dark_simetric.png"
+		border		= { 0, 0, 0, 0 }
+		stretch		= TRUE
+		} 
+	}
+}
+
+style "breadcrumbs" 
+{
+	xthickness = 5
+	ythickness = 3
+	ThunarLocationButtons::spacing = 0
+}
+
+widget_class "*ThunarLocationButtons*"		style "breadcrumbs"
+widget_class "*ThunarShortcutsView*"		style "sidepane"
+widget_class "*ThunarTreeView*"				style "sidepane"
+widget_class "*ThunarLocationEntry*"		style "entry"
+widget_class "*ThunarStatusbar*"			style "resize-grip"
+
+# Gtk2 Open-File Dialog
+widget_class "*GtkFileChooserWidget.GtkFileChooserDefault.GtkVBox.GtkHPaned.GtkVBox.GtkScrolledWindow.GtkTreeView*"					style "sidepane"
+widget_class "*GtkFileChooserWidget.GtkFileChooserDefault.GtkVBox.GtkHPaned.GtkVBox.GtkScrolledWindow.<GtkTreeView>.<GtkButton>"	style "treeview-header"
+
+#class "GtkTreeView" style "sidepane"

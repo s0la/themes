@@ -1,0 +1,140 @@
+menu.title.bg: flat gradient vertical
+menu.title.bg.color:  #2C2E2F
+menu.title.bg.colorTo: #383a3b
+menu.title.text.font: shadow=n:shadowtint=100:shadowoffset=1
+osd.label.text.font: shadow=y:shadowtint=-100:shadowoffset=1
+menu.title.text.color:#ffffff
+menu.title.text.justify: center
+menu.separator.padding.width: 10
+menu.separator.color:#F5F6F7
+menu.border.color: #4c4c4c
+menu.border.width: 0
+
+menu.items.bg: flat solid
+menu.items.bg.color: #383a3b
+menu.items.text.color: #adadad
+menu.items.disabled.text.color: #575757
+
+#menu.items.active.bg: flat solid
+#menu.items.active.bg.color: #333
+#menu.items.active.text.color: #9bbbbe
+
+menu.items.active.bg: flat 
+menu.items.active.bg.color: #333536
+menu.items.active.text.color:#F5F6F7
+
+menu.separator.color: #383a3b
+menu.separator.width: 1
+menu.separator.padding.width: 1
+menu.separator.padding.height: 1
+
+menu.bullet.image.color: #383a3b
+menu.bullet.selected.image.color: #303233
+
+# Active window
+
+window.active.title.bg: flat Gradient Vertical
+window.active.title.bg.colorTo: #383a3b
+window.active.title.bg.color: #2C2E2F
+window.active.title.bg.shadow: 0
+
+window.inactive.title.bg: flat Gradient Vertical
+window.inactive.title.bg.color:  #2C2E2F
+window.inactive.title.bg.colorTo:  #383a3b
+window.inactive.title.bg.shadow: 0
+
+window.label.text.justify: center
+window.active.label.bg: parentrelative
+window.active.label.text.color:#eeeeee
+window.inactive.label.bg: parentrelative
+window.inactive.label.text.color: #aaaaaa
+
+window.active.title.separator.color:  #4a4a4a
+window.inactive.title.separator.color: #4a4a4a
+
+#icons
+window.active.button.pressed.bg: parentrelative
+window.active.button.pressed.image.color: #5294E2
+
+window.active.button.disabled.bg: parentrelative
+window.active.button.disabled.image.color: #dbdfe3
+
+window.active.button.iconify.unpressed.bg: parentrelative
+window.active.button.iconify.unpressed.image.color: #f9bc2d
+
+window.active.button.max.unpressed.bg: parentrelative
+window.active.button.max.unpressed.image.color: #2bcc46
+
+window.active.button..close.unpressed.bg: parentrelative
+window.active.button..close.unpressed.image.color: #f95f57
+
+window.active.button.iconify.hover.bg: parentrelative
+window.active.button.iconify.hover.image.color: #df9e07
+
+window.active.button.iconify.pressed.bg: parentrelative
+window.active.button.iconify.pressed.image.color: #df9e07
+
+window.active.button.max.hover.bg: parentrelative
+window.active.button.max.hover.image.color: #24a83a
+
+window.active.button.max.pressed.bg: parentrelative
+window.active.button.max.pressed.image.color: #24a83a
+
+window.active.button.close.hover.bg: parentrelative
+window.active.button.close.hover.image.color: #dd1308
+
+window.active.button.close.pressed.bg: parentrelative
+window.active.button.close.pressed.image.color: #dd1308
+
+window.active.button.toggled.unpressed.bg: parentrelative
+window.active.button.toggled.unpressed.image.color: #24a83a
+
+window.active.button.toggled.pressed.bg: parentrelative
+window.active.button.toggled.pressed.image.color: #5294E2
+
+window.active.button.toggled.hover.bg: parentrelative
+window.active.button.toggled.hover.image.color: #2bcc46
+
+window.inactive.button.unpressed.bg: parentrelative
+window.inactive.button.unpressed.image.color: #3C3F40
+
+window.inactive.button.pressed.bg: parentrelative
+window.inactive.button.pressed.image.color: #4D5152
+
+window.inactive.button.disabled.bg: parentrelative
+window.inactive.button.disabled.image.color: #dbdfe3
+
+window.inactive.button.hover.bg: parentrelative
+window.inactive.button.hover.image.color: #4D5152
+
+window.inactive.button.toggled.unpressed.bg: parentrelative
+window.inactive.button.toggled.unpressed.image.color: #dddee2
+
+window.inactive.button.toggled.pressed.bg: parentrelative
+window.inactive.button.toggled.pressed.image.color: #5294E2
+
+window.inactive.button.toggled.hover.bg: parentrelative
+window.inactive.button.toggled.hover.image.color: #70788d
+
+border.color: #cdcdcd
+border.width: 0
+padding.width: 4
+padding.height: 2
+window.handle.width: 0
+window.client.padding.width: 0
+window.client.padding.height: 0
+menu.overlap.x: -3
+menu.overlap.y: 0
+osd.border.width: 1
+osd.border.color:  #555555
+
+osd.bg: flat solid
+osd.bg.color: #2C2E2F
+osd.label.text.color: #F5F6F7
+osd.hilight.bg: flat gradient vertical
+osd.hilight.bg.color: #383a3b
+osd.hilight.bg.colorTo: #383a3b
+
+osd.unhilight.bg: flat gradient vertical
+osd.unhilight.bg.color: #7E7e7e
+osd.unhilight.bg.colorTo: #404040
