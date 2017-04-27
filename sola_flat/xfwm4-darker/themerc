@@ -1,0 +1,8 @@
+button_offset=5
+button_spacing=5
+full_width_title=true
+
+active_text_color=#555
+inactive_text_color=#9c9292
+title_vertical_offset_active=2
+title_vertical_offset_inactive=2
